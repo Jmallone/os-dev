@@ -5,7 +5,7 @@ ReadDisk:
 
 	mov ah, 0x02
 	mov bx, PROGRAM_SPACE
-	mov al, 2 			;Quantos setores queremos ler
+	mov al, 64 			;Quantos setores queremos ler
 	mov dl, [BOOT_DISK] ;daonde esta lendo
 	mov ch, 0x00		; Cilindro 0
 	mov dh, 0x00		; head 0 

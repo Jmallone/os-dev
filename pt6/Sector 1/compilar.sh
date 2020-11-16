@@ -9,4 +9,4 @@ ld -o kernel.tmp -Ttext 0x7e00 ExtendedProgram.o Kernel.o
 objcopy -O binary kernel.tmp kernel.bin
 
 cat bootloader.bin kernel.bin > bootloader.flp
-qemu-system-x86_64 bootloader.flp
+qemu-system-x86_64 -fda bootloader.flp -d int
