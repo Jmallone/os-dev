@@ -1,7 +1,5 @@
 #pragma once
 #include "TypeDefs.cpp"
-#include "IO.cpp"
-#include "TextPrint.cpp"
 
 /*Interrupt descriptor Table*/
 struct IDT64{
