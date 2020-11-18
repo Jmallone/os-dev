@@ -13,5 +13,6 @@ extern "C" void _start(){
 	PrintString(Test2);
 	InitializeIDT();
 
+
 	return;	
 }
