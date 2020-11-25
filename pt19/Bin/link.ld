@@ -4,19 +4,19 @@ ENTRY(_start)
 
 INPUT
 (
-	../Bin/ExtendedProgram.o
-	../Bin/Kernel.o
-	../Bin/IDT.o
-	../Bin/IO.o
-	../Bin/Keyboard.o
-	../Bin/MemoryMap.o
-	../Bin/TextPrint.o
-	../Bin/Binaries.o
+	ExtendedProgram.o
+	Kernel.o
+	IDT.o
+	IO.o
+	Keyboard.o
+	MemoryMap.o
+	TextPrint.o
+	Binaries.o
 )
 
 OUTPUT
 (
-	../Bin/kernel.bin
+	kernel.bin
 )
 
 SECTIONS

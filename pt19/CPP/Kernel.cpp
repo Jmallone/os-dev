@@ -8,12 +8,11 @@ extern "C" void _start(){
 
 	ClearScreen();
 	SetCursorPosition(PositionFromCoords(0, 0));
-//	PrintString("          Blue Dog OS         \n\r", BACKGROUND_BLINKINGBLUE | FOREGROUND_WHITE);
-//	PrintString(Test, BACKGROUND_BLINKINGWHITE | FOREGROUND_BLUE);
+	PrintString("          Blue Dog OS         \n\r", BACKGROUND_BLINKINGBLUE | FOREGROUND_WHITE);
+	PrintString(Test, BACKGROUND_BLINKINGWHITE | FOREGROUND_BLUE);
 	InitializeIDT();
 	MainKeyBoardHandler = KeyBoardHandler;
 	
-	/*	
 	MemoryMapEntry** UsableMemoryMaps = GetUsableMemoryRegions();
 
 	SetCursorPosition(PositionFromCoords(45,1));
@@ -29,6 +28,7 @@ extern "C" void _start(){
 	}
 
 	SetCursorPosition(PositionFromCoords(0, 9));
+	/*	
 	*/
 	return;	
 }

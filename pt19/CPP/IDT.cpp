@@ -1,8 +1,8 @@
 #include "IDT.h"
+#include "Keyboard.h"
 extern IDT64 _idt[256];
 extern uint_64 isr1; 
 extern "C" void LoadIDT();
-void (*MainKeyBoardHandler)(uint_8 scanCode, uint_8 chr);
 
 void InitializeIDT(){
 
@@ -20,6 +20,7 @@ void InitializeIDT(){
 	LoadIDT();
 }
 
+void (*MainKeyBoardHandler)(uint_8 scanCode, uint_8 chr);
 extern "C" void isr1_handler(){
 	
 	uint_8 scanCode = inb(0x60);
@@ -29,10 +30,8 @@ extern "C" void isr1_handler(){
 		chr = KBSet1::ScanCodeLookupTable[scanCode];
 	}
 	if(MainKeyBoardHandler != 0){
-		MainKeyBoardHandler(scanCode, chr);	
-	}else{
-		
-		PrintString("!\n\r");
+		//MainKeyBoardHandler(scanCode, chr); //That is correct, but doesnt work =( 
+		KeyBoardHandler(scanCode, chr); //That is not igual the poncho's tutorial	
 	}
 	
 	
