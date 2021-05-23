@@ -15,7 +15,7 @@ Linux notebook 5.3.0-64-generic #58-Ubuntu SMP Fri Jul 10 19:33:51 UTC 2020 x86_
 
 ### Run
 
-To run, enter any folder and run the ./compilar.sh file.
+To run, enter any folder and run the ```./compilar.sh``` file.
 Make sure you have qemu installed and other dependencies cited in 1# video.
 
 
